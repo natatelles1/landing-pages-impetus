@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlycoCare™ - Advanced supplement for healthy blood sugar and metabolic balance. 60-day money-back guarantee.">
+    <meta name="keywords" content="blood sugar support, metabolic health, glucose balance, supplement">
+    <title>GlycoCare™ — Support Healthy Blood Sugar & Metabolic Balance — Naturally.</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-cta:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        /* Problems Section */
+        .problems {
+            background: var(--bg-light);
+        }
+
+        .problems-list {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .problems-list li {
+            padding: 1rem;
+            background: var(--white);
+            border-left: 4px solid var(--danger);
+            border-radius: 0.25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .problems-list li::before {
+            content: '•';
+            color: var(--danger);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Product Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--white);
+        }
+
+        .benefits-list {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefits-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            list-style: none;
+            font-size: 1.05rem;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--bg-light);
+        }
+
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .how-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .how-card-number {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Formula Section */
+        .formula {
+            background: var(--white);
+        }
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .formula-item {
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .formula-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .pricing h2 {
+            color: var(--white);
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-dark);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 3px solid var(--success);
+        }
+
+        .pricing-card.featured::before {
+            content: 'BEST VALUE';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .pricing-card .supply {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .pricing-card .total {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-card .benefits-small {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .pricing-card .benefits-small li {
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-card .benefits-small li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .pricing-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background: var(--bg-light);
+        }
+
+        .guarantee-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-left: 5px solid var(--success);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .guarantee-box h3 {
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--bg-light);
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 1000px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4b5563;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Utility Classes */
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+            color: #92400e;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-3 {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">GlycoCare™</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Support Healthy Blood Sugar & Metabolic Balance — Naturally.</h1>
+            <p>GlycoCare™ is a comprehensive daily supplement formulated with vitamins, minerals, botanicals, and antioxidants designed to support metabolic health, glucose balance, and overall wellness.</p>
+            <a href="#pricing" class="hero-cta">Get GlycoCare Today - 60-Day Money-Back Guarantee</a>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2>Why Do Adults Struggle With Metabolic Balance?</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">Many people experience these common challenges:</p>
+            <ul class="problems-list">
+                <li>Energy crashes during the day</li>
+                <li>Sugar cravings that sabotage healthy eating</li>
+                <li>Difficulty maintaining healthy glucose levels</li>
+                <li>Metabolic slowdown with age</li>
+                <li>Feeling tired after meals</li>
+            </ul>
+            <p style="text-align: center; color: var(--text-light);">These challenges are often related to lifestyle, diet, and how the body processes carbohydrates. GlycoCare™ was developed to provide daily nutritional support for metabolic health.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <h2>GlycoCare™ — Advanced Metabolic Support Formula</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-light);">Each capsule delivers a carefully balanced combination of premium ingredients:</p>
+            
+            <h3 style="color: var(--primary);">Key Vitamins & Minerals</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Vitamin C (50 mg)</h3>
+                    <p>Provides antioxidant support to protect cells from oxidative stress</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Magnesium (125 mg)</h3>
+                    <p>Supports normal metabolic function and energy production</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Zinc (7.5 mg)</h3>
+                    <p>Supports optimal insulin function for better glucose control</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Chromium (67 mcg)</h3>
+                    <p>Supports normal blood sugar metabolism and carb processing</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Biotin (300 mcg)</h3>
+                    <p>Supports energy metabolism and healthy hair, skin & nails</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Vitamin E (10 mg)</h3>
+                    <p>Provides cellular protection against free radical damage</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary); margin-top: 3rem;">Botanical & Nutrient Blend</h3>
+            <div class="formula-grid">
+                <div class="formula-item">
+                    <strong>Banaba Leaf Extract</strong>
+                    <p>Contains corosolic acid for glucose metabolism support</p>
+                </div>
+                <div class="formula-item">
+                    <strong>Bitter Melon Extract</strong>
+                    <p>Traditional botanical for metabolic wellness</p>
+                </div>
+                <div class="formula-item">
+                    <strong>Gymnema Sylvestre</strong>
+                    <p>Ayurvedic herb supporting healthy glucose balance</p>
+                </div>
+                <div class="formula-item">
+                    <strong>Cinnamon Bark Extract</strong>
+                    <p>Well-researched spice for metabolic support</p>
+                </div>
+                <div class="formula-item">
+                    <strong>Alpha Lipoic Acid</strong>
+                    <p>Powerful antioxidant supporting metabolic function</p>
+                </div>
+                <div class="formula-item">
+                    <strong>+ 10 More Botanicals</strong>
+                    <p>Licorice, Guggul, Yarrow, Juniper, Mulberry & more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <div class="container">
+            <h2>The Benefits of GlycoCare™</h2>
+            <ul class="benefits-list">
+                <li>Supports healthy metabolic function</li>
+                <li>Helps maintain healthy blood sugar levels already within normal range</li>
+                <li>Supports optimal insulin function and sensitivity</li>
+                <li>Promotes healthy energy metabolism</li>
+                <li>Provides powerful antioxidant protection</li>
+                <li>Supports mental clarity and focus</li>
+                <li>Helps reduce sugar cravings naturally</li>
+                <li>Improves overall metabolic efficiency</li>
+            </ul>
+            <div class="warning">
+                <strong>Disclaimer:</strong> These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how">
+        <div class="container">
+            <h2>Why GlycoCare™ Works: Multi-Pathway Support</h2>
+            <div class="how-it-works-grid">
+                <div class="how-card">
+                    <div class="how-card-number">1</div>
+                    <h3>Carbohydrate Metabolism</h3>
+                    <p>Supports your body's natural ability to process carbohydrates efficiently</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">2</div>
+                    <h3>Glucose Utilization</h3>
+                    <p>Helps maintain healthy glucose levels already in normal range</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">3</div>
+                    <h3>Insulin Sensitivity</h3>
+                    <p>Chromium & Zinc work together to support optimal insulin function</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">4</div>
+                    <h3>Antioxidant Protection</h3>
+                    <p>Protects cells from oxidative stress and free radical damage</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">5</div>
+                    <h3>Energy & Efficiency</h3>
+                    <p>Supports metabolic efficiency and sustained energy levels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section>
+        <div class="container">
+            <h2>How to Use GlycoCare™</h2>
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 0.5rem; text-align: center; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Take 1 capsule daily with food</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">For best results, take consistently every day. GlycoCare™ works best as part of a healthy lifestyle including balanced diet and regular exercise.</p>
+            </div>
+            <div class="warning">
+                <strong>⚠️ Important Safety Information:</strong><br>
+                Do not exceed the recommended dose. Do not use if you are under 18 years old. Not for pregnant or nursing women. Consult a physician before use if you are taking medication or have a medical condition. Keep out of reach of children.
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your GlycoCare™ Supply</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.95;">All plans include our 60-day money-back guarantee and free shipping to the U.S.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>60-Day Supply</h3>
+                    <div class="supply">2 Bottles</div>
+                    <div class="price">$79</div>
+                    <div class="total">Total Value: $118</div>
+                    <ul class="benefits-small">
+                        <li>2 Months of Daily Support</li>
+                        <li>Premium Formula</li>
+                        <li>60-Day Guarantee</li>
+                    </ul>
+                    <a href="https://glycocare.pay.clickbank.net/?cbitems=2&cbfid=62209&template=glycocare2&exitoffer=glycobanne" class="pricing-btn">Buy Now</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>90-Day Supply</h3>
+                    <div class="supply">3 Bottles</div>
+                    <div class="price">$69</div>
+                    <div class="total">Total Value: $147</div>
+                    <ul class="benefits-small">
+                        <li>3 Months of Daily Support</li>
+                        <li>Premium Formula</li>
+                        <li>Free U.S. Shipping</li>
+                        <li>60-Day Guarantee</li>
+                    </ul>
+                    <a href="https://glycocare.pay.clickbank.net/?cbitems=3&cbfid=62209&template=glycocare3&exitoffer=glycobanne" class="pricing-btn">Buy Now - Best Value</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>180-Day Supply</h3>
+                    <div class="supply">6 Bottles</div>
+                    <div class="price">$49</div>
+                    <div class="total">Total Value: $294</div>
+                    <ul class="benefits-small">
+                        <li>6 Months of Daily Support</li>
+                        <li>Premium Formula</li>
+                        <li>Free U.S. Shipping</li>
+                        <li>60-Day Guarantee</li>
+                    </ul>
+                    <a href="https://glycocare.pay.clickbank.net/?cbitems=4&cbfid=62209&template=glycocare6&exitoffer=glycobanne" class="pricing-btn">Buy Now - Save More</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; color: rgba(255, 255, 255, 0.9);">
+                <p style="margin-bottom: 1rem;">✓ Secure Checkout | ✓ Money-Back Guarantee | ✓ Fast Shipping</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <h2>Our 60-Day Money-Back Guarantee</h2>
+            <div class="guarantee-box">
+                <h3>100% Risk-Free Trial</h3>
+                <p>Try GlycoCare™ for a full 60 days. If you're not completely satisfied with the results, we'll refund every penny — no questions asked.</p>
+                <p style="margin-top: 1rem; color: var(--text-light);"><strong>Return Address:</strong><br>
+                c/o GlycoCare<br>
+                19655 E 35th Drive, Suite 100<br>
+                Aurora, CO 80011<br>
+                United States</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What People Are Saying About GlycoCare™</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finally have steady energy throughout the day! No more afternoon crashes. GlycoCare™ has been a game-changer for my metabolism."</p>
+                    <p class="testimonial-author">— Sarah M., Texas</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The sugar cravings are gone. After just 3 weeks, I noticed a significant difference in my energy levels and mental clarity."</p>
+                    <p class="testimonial-author">— James P., California</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I was skeptical at first, but the results speak for themselves. My bloodwork has improved and I feel so much better. Highly recommend!"</p>
+                    <p class="testimonial-author">— Maria G., Florida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">Is GlycoCare™ safe to take?</button>
+                <div class="faq-answer">
+                    <p>Yes, GlycoCare™ is formulated with all-natural ingredients and has been safety tested. However, if you are pregnant, nursing, under 18, or taking medications, please consult your physician before use. The product is made in a GMP-certified facility following strict quality standards.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long before I see results?</button>
+                <div class="faq-answer">
+                    <p>Most people notice improvements within 2-4 weeks of consistent use. However, results vary based on individual metabolism, diet, and lifestyle. We recommend taking GlycoCare™ for at least 60 days to experience the full benefits, which is why we offer our 60-day money-back guarantee.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I take GlycoCare™ with other supplements?</button>
+                <div class="faq-answer">
+                    <p>GlycoCare™ is generally safe to take with other supplements. However, if you're taking specific medications or have concerns about interactions, please consult with your healthcare provider before starting any new supplement regimen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there a subscription or auto-delivery option?</button>
+                <div class="faq-answer">
+                    <p>Currently, we offer one-time purchases through our secure ClickBank checkout. You can reorder as needed. We're working on adding auto-delivery options in the future.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What if I'm not satisfied?</button>
+                <div class="faq-answer">
+                    <p>No problem! We offer a 100% 60-day money-back guarantee. If you're not completely satisfied for any reason, simply return the bottles to our address (see Guarantee section) and we'll refund your full purchase price.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you ship internationally?</button>
+                <div class="faq-answer">
+                    <p>Currently, we offer free shipping to the United States. International shipping may be available depending on your location. Please contact our support team at contact@vital-roots.site for inquiries about international orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;"><strong>Questions? We're Here to Help</strong><br>
+            Email: contact@vital-roots.site</p>
+            
+            <div class="footer-links">
+                <a href="#" onclick="toggleFAQ(0)">Privacy Policy</a>
+                <a href="#" onclick="toggleFAQ(1)">Terms of Use</a>
+                <a href="#" onclick="toggleFAQ(2)">Disclaimer</a>
+                <a href="#" onclick="toggleFAQ(3)">Shipping Policy</a>
+                <a href="#" onclick="toggleFAQ(4)">Refund Policy</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 GlycoCare™ | All Rights Reserved</p>
+                <p style="margin-top: 1rem;">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach((button, index) => {
+            button.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach((item, i) => {
+                    if (i !== index) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        function toggleFAQ(index) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            if (faqItems[index]) {
+                faqItems[index].classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>
